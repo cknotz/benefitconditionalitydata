@@ -1,6 +1,445 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head></head>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A dataset on the strictness of unemployment
+  benefit eligibility conditions and sanction rules in 21 advanced democracies, 1980-2012">
+  <meta name=”robots” content="index, follow">
+  <title>The Comparative Unemployment Benefit Conditions and Sanction Dataset</title>
+  <link rel="canonical" href="">
+  <link rel="stylesheet" media="screen and (min-width:1000px)" href="styles_screen.css">
+  <link rel="stylesheet" media="screen and (max-width:999px)" href="styles_phone.css">
+</head>
+
 <body>
-<h1>Test</h1>
+  <a name="top"></a>
+  <h1>The Comparative Unemployment Benefit Conditions & Sanctions Dataset</h1>
+  <div id="navbar">
+    <a href="#top">Home</a>
+    <a href="#data">Access & Explore</a>
+    <a href="#pubs">Publications</a>
+    <a href="#people">People</a>
+    <a href="#next">Contribute</a>
+    <a href="#disc">Disclaimer</a>
+  </div>
+  <script src="stickyhead.js"></script>
+  <section id="main">
+    <div class="content-wrap">
+      <h3> About </h3>
+      <p>
+        <strong>Many believe that the unemployed are too 'lazy' or 'choosy', and that
+          unemployment rates could be lowered if one would only force unemployed workers
+          to seek and accept work quickly. Others counter that the rules are already too
+          tough, and that the unemployed should rather receive more help and support. </strong>
+      </p>
+      <p>
+        For a long time, though, it was not easy to say exactly how strictly or
+        leniently the
+        unemployed in a given country were really treated: how freely they could
+        choose between available jobs, how stringently their job-search efforts
+        were checked, and what penalties could be imposed if they would not comply
+        with their obligations. As a result, it was also not fully clear whether
+        countries with tough rules really do have lower unemployment rates &mdash; and
+        therefore whether putting the unemployed under pressure really is a good
+        way to reduce unemployment.
+      </p>
+      <p>
+        The <strong>Comparative Unemployment Benefit Conditions & Sanctions Dataset </strong> was created to solve
+        this problem. It provides systematic information and quantitative indicators
+        of the strictess of job-search and reporting requirements, the definition of
+        'suitable work', and unemployment benefit sanction rules in 21 economically
+        advanced democracies in Europe, North America and Australasia
+        between 1980 and 2012.
+      </p>
+      <p class="descr">
+        <strong>These data have already provided us with a clearer picture of how strict
+          rules for the unemployed are related to the performance of the labor market</strong>.
+        The two interactive graphs below show that countries that had in the period
+        between 1980 and 2012 on average put greater pressure on the unemployed to seek and
+        accept work tended to have lower unemployment rates (graph on the left),
+        but only slightly so. Also visible is that countries that had in the same
+        period imposed tougher benefit sanctions on the unemployed tended to
+        have higher unemployment rates (graph on the right).
+      </p>
+
+      <div class="inter" id="graphs">
+        <iframe id="left_frame" src="congraph.html" seamless=1 frameborder=0 width="500" height="300" scrolling="no"> </iframe>
+        <iframe id="right_frame" src="sangraph.html" seamless=1 frameborder=0 width="500" height="300" scrolling="no"></iframe>
+      </div>
+
+      <p class="descr">
+        More detailed analyses (published <a href="https://doi.org/10.1093/esr/jcz041" target="_blank">here</a> and
+        <a href="https://doi.org/10.1017/S0047279418000740" target="_blank">here</a>) revealed that putting greater pressure on the unemployed
+        to seek and accept work does indeed improve labor market performance; stricter
+        sanction rules, on the other hand, are <i> a result of</i> high unemployment:
+        Sanction rules tend to be made stricter after economic downturns. But the data
+        do not show that stricter sanction rules then have an effect on unemployment rates
+        (but they do have other <a href="https://doi.org/10.1017/S0047279417000915" target="_blank">
+          negative effects</a>).<span class='footnote' data-toggle="tooltip"
+          title="You can find R code to replicate the two graphs on <a href='https://github.com/cknotz/conditionality_interactivegraphs' target='_blank'>GitHub</a>."></span>
+      </p>
+      <!-- <p class="descr">
+        Thanks to the dataset we also have a clearer picture of how these rules have
+        changed in recent decades. The animation below shows
+      </p> -->
+
+      <p>The creation of this dataset was made possible by a generous grant from
+        the Crafoord Foundation (<a href="https://www.crafoord.se" target="_blank">Crafoordska
+          stiftelsen</a>) as well as lots of help,
+        advice, and support from numerous contributors, country experts, and
+        interested scholars. The work on this dataset was conducted at the
+        <a href="http://www.svet.lu.se" target="_blank">Department of Political Science</a>
+        at Lund University.</p>
+    </div>
+  </section>
+
+  <div class="wrapper">
+    <div class="divider div-transparent"></div>
+
+    <section id="data">
+      <div class="content-wrap">
+        <h3> Access & explore the data </h3>
+        <iframe src="https://cknotz.shinyapps.io/conditionality_newapp/" width="100%" height="900px" seamless=1 frameborder=0 alt="Interactive data dashboard" class="inter"></iframe>
+        <p class="mobinfo">
+          You can access the data dashboard
+          <a href="https://cknotz.shinyapps.io/conditionality_newapp/" target="_blank">here</a>.
+          (Please view this website from a device with a wider screen to see the
+          embedded dashboard and other visualizations.)
+        </p>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <div class="divider div-transparent"></div>
+
+      <section id="pubs">
+        <div class="content-wrap">
+          <h3> Publications using the dataset </h3>
+          <p>
+            Published research using this dataset includes:
+          </p>
+          <ul>
+            <li>
+              Vlandas, Tim. [forth]. "The political economy of individual
+              level support for the basic income in Europe"
+              <a target="_blank" href="https://ora.ox.ac.uk/objects/uuid:0ac9564b-6983-4a43-9051-076ff2f48d6b/download_file?safe_filename=VlandasAAM2019.pdf&file_format=application%2Fpdf&type_of_work=Journal+article"><i>Journal of European Social
+                  Policy</i></a>.
+            </li>
+            <li>
+              Knotz, Carlo. 2020. "Does Demanding Activation Work? A Comparative
+              Analysis of the Effects of Unemployment Benefit Conditionality on
+              Employment in 21 Advanced Economies, 1980–2012" <a target="_blank" href="https://doi.org/10.1093/esr/jcz041"><i>European Sociological Review</i></a>
+              36(1):121–135.
+            </li>
+            <li>
+              Bakker, Vincent and Olaf van Vliet. 2019. "Social Investment,
+              Employment Outcomes and Policy and Institutional Complementarities:
+              A Comparative Analysis across 26 OECD Countries"
+              <a target="_blank" href="https://ssrn.com/abstract=3458304">
+                <i>Department of Economics Research Memorandum</i></a>
+              2019.01.
+            </li>
+            <li>
+              Knotz, Carlo. 2019. "Why Countries 'Get Tough on the Work-Shy': The
+              role of Adverse Economic Conditions"
+              <a target="_blank" href="https://doi.org/10.1017/S0047279418000740"><i>Journal of Social Policy</i></a>
+              48(3):615-634.
+            </li>
+            <li>
+              Immervoll, Herwig and Carlo Knotz. 2018. "How demanding are activation
+              requirements for jobseekers?" <a target="_blank" href="https://doi.org/10.1787/2bdfecca-en"><i>OECD Social, Employment and Migration
+                  Working Papers</i></a> 215.
+            </li>
+            <li>
+              Knotz, Carlo. 2018. "A Rising Workfare State? Unemployment benefit
+              conditionality in 21 OECD countries, 1980–2012"
+              <a target="_blank" href="https://doi.org/10.1080/21699763.2018.1472136">
+                <i>Journal of International and Comparative Social Policy</i></a> 34(2):91–108.
+            </li>
+          </ul>
+          <p>
+            If you have also used this dataset in your research and would like
+            to have any resulting publications listed here, please do let us know.
+          </p>
+        </div>
+      </section>
+
+      <div class="wrapper">
+        <div class="divider div-transparent"></div>
+
+        <section id="people">
+          <div class="content-wrap">
+            <h3>People</h3>
+            <button class="collapsible">Principal investigators</button>
+            <div class="content">
+              <p><strong>Carlo Knotz</strong>
+              </p>
+              <p>
+                Carlo worked on the Benefit Conditions & Sanctions Dataset during
+                his time as a doctoral student at the Department of Political
+                Science at Lund University. His dissertation, which draws
+                extensively on the Benefit Conditions & Sanctions Dataset, was
+                awarded the 2017 Research Prize by the Swedish Federation of
+                Unemployment Insurance Funds (Arbetslöshetskassornas
+                Samorganisation/Sveriges A-Kassor). Since January 2019 he is
+                a Postdoctoral Researcher at the Swiss Graduate School of Public
+                Administration (IDHEAP) in Lausanne, having held
+                a Postdoctoral Fellowship at the Bremen International Graduate
+                School of Social Sciences (BIGSSS) just before.
+              <p>
+              <div>
+                <form>
+                  <button class="button" formaction="mailto:carlo.knotz@gmail.com">E-mail</button>
+                </form>
+                <form target="_blank">
+                  <button class="button" formaction="https://orcid.org/0000-0003-0042-3065">OrcID</button>
+                </form>
+                <form target="_blank">
+                  <button class="button" formaction="https://github.com/cknotz">GitHub</button>
+                </form>
+              </div>
+              </p>
+              <p style="margin-bottom:1cm;">
+              </p>
+              <p>
+                <strong>Moira Nelson</strong>
+              </p>
+              <p>
+                Moira is Assistant Professor at the Department of Political Science
+                at Lund University. Her research examines the determinants and
+                consequences of social policies, including the electoral incentives
+                of governments to introduce welfare state reforms and the employment
+                consequences of social policies.
+              </p>
+              <p>
+              <div>
+                <form>
+                  <button class="button" formaction="mailto:moira.nelson@svet.lu.se">E-mail</button>
+                </form>
+                <form target="_blank">
+                  <button class="button" formaction="https://www.svet.lu.se/en/moira-nelson">Homepage</button>
+                </form>
+              </div>
+              </p>
+            </div>
+            <button class="collapsible">Contributors</button>
+            <div class="content">
+              <p>
+                The following persons contributed to this dataset by collecting data on individual countries:
+              <ul style="list-style-type:none">
+                <li>
+                  Alberjan Tollenaar & Gijsbert Vonk collected the data on the Netherlands
+                </li>
+                <li>
+                  Alejandra Keidel Fernandez assisted with the collection of the data on Spain
+                </li>
+                <li>
+                  Luis Gonzales da Silva collected the data on Portugal
+                </li>
+                <li>
+                  Stefano Sacchi & Patrik Vesan collected the data on Italy
+                </li>
+                <li>
+                  Takeshi Yanagisawa collected the data on Japan
+                </li>
+                <li>
+                  Varvara Lalioti collected the data on Greece
+                </li>
+              </ul>
+              </p>
+            </div>
+            <button class="collapsible">Expert reviewers</button>
+            <div class="content">
+              <p>
+                To ensure that our data are complete and free of errors, we
+                asked a number of scholars who are experts in this field to review them and, where necessary,
+                suggest corrections:
+              <ul style="list-style-type:none">
+                <li>
+                  Australia: Agnieszka Nelson (Australian National University
+                  & FaHCSIA) and David Stanton (Australian National University)
+                </li>
+                <li>
+                  Austria: Sarah Bruckner and Günter Krapf (Arbeiterkammer Wien)
+                </li>
+                <li>
+                  Belgium: Ive Marx (Herman Deleeck Centre for Social Policy, Antwerp University)
+                </li>
+                <li>
+                  Canada: Ann Porter (York University)
+                </li>
+                <li>
+                  Denmark: Thomas Bredgaard (Aalborg University)
+                </li>
+                <li>
+                  Finland: Heikki Räisänen (Ministry of Employment Finland & University of Tampere)
+                </li>
+                <li>
+                  France: Jean-Claude Barbier (Université Paris 1 Sorbonne)
+                </li>
+                <li>
+                  Germany: Jochen Clasen (University of Edinburgh) and
+                  Regina Konle-Seidl (Institute for Employment Research, IAB)
+                </li>
+                <li>
+                  Greece: Dimitris Karantinos (National Centre for Social Research, EKKE)
+                </li>
+                <li>
+                  Ireland: Mel Cousins (Trinity College Dublin)
+                </li>
+                <li>
+                  Italy: Stefano Sacchi (University of Milan & Collego Carlo
+                  Alberto, Turin) and Patrik Vesan (Università della Valle d'Aosta)
+                </li>
+                <li>
+                  Japan: Takeshi Yanagisawa (Meijo University)
+                </li>
+                <li>
+                  Netherlands: Frans Penning (Utrecht University) and Albertjan Tollenaar (University of Groningen)
+                </li>
+                <li>
+                  New Zealand: Alex McKenzie (Ministry of Social Development New Zealand)
+                </li>
+                <li>
+                  Norway: Ivar Lødemel (Oslo and Akershus University of Applied Sciences)
+                </li>
+                <li>
+                  Portugal: Luis Gonzales da Silva (Instituto do Direito do Trabalho)
+                </li>
+                <li>
+                  South Korea: Deok Soon Hwang (Korea Labour Institute)
+                </li>
+                <li>
+                  Spain: David Rueda (University of Oxford)
+                </li>
+                <li>
+                  Sweden: Ola Sjöberg (SOFI & Stockholm University)
+                </li>
+                <li>
+                  Switzerland: Carla Togni (EESP Lausanne)
+                </li>
+                <li>
+                  United Kingdom: Jochen Clasen (University of Edinburgh)
+                </li>
+              </ul>
+              </p>
+            </div>
+            <script src="collapse.js"></script>
+        </section>
+
+        <div class="wrapper">
+          <div class="divider div-transparent"></div>
+
+          <section id="next">
+            <div class="content-wrap">
+              <h3> Contribute</h3>
+              <p>
+                No dataset is ever perfect or complete.
+              </p>
+              <p>
+                Therefore, and firstly, please do let us know if you spot any
+                errors or problems in the materials we provide!
+              </p>
+              <p>
+                There are also some ways in which the data could still be further improved.
+                We ourselves are lacking the time and resources to do so,
+                but would be more than grateful for input from others interested in
+                contributing. We will also provide all the help and assistance we can.
+              </p>
+              <p>
+                Examples of opportunities for further development include:
+              <ul>
+                <li>
+                  The data could be updated to reflect more recent policy changes.
+                  A series of <a target="_blank" href="https://doi.org/10.1787/2bdfecca-en">
+                    OECD studies</a> has already provided updated data for selected
+                  years, and these could be used as a starting point.
+                </li>
+                <li>
+                  The coded data on Italy measure availability conditions and
+                  sanction rules for the Unemployment Benefit scheme. We have also
+                  collected, but not coded yet, qualitative data on the Italian
+                  Mobility Allowance and Short-term Work benefit schemes.
+                  Any interest in coding these schemes as
+                  well would be greatly appreciated.
+                </li>
+                <li>
+                  The United States are, due to the devolved nature of the U.S.
+                  Unemployment Benefit scheme, not covered by this dataset yet.
+                  We do, however, have data on State-level rules that are not
+                  coded yet, and additional historical information on
+                  legislative rules and their changes in U.S. States may also
+                  be available from the U.S. Social Security Administration's
+                  <a target="_blank" href="https://www.ssa.gov/policy/docs/ssb/index.html">
+                    Social Security Bulletin</a> (see e.g. vol.
+                  <a target="_blank" href="https://www.ssa.gov/policy/docs/ssb/v16n12/v16n12p14.pdf">16(2) of 1953</a>)
+                  or various articles in the U.S. Bureau of Labor Statistics'
+                  <a target="_blank" href="https://www.bls.gov/opub/mlr/home.htm">Monthly Labor Review</a>
+                  (see e.g. <a target="_blank" href="https://www.bls.gov/opub/mlr/1981/03/art8full.pdf">March 1981</a>).
+                </li>
+                <li>
+                  We were not able to collect data on any of the countries of
+                  Central and Eastern Europe, although they are now commonly
+                  included in related data collection projects by the OECD and
+                  others (as they should be). Anyone who is interested in
+                  contributing historical data on unemployment benefit eligibility
+                  rules and sanctions in any of these countries is more than
+                  welcome to contact us.
+                </li>
+              </ul>
+              </p>
+            </div>
+          </section>
+
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+
+            <section id="disc">
+              <div class="content-wrap">
+                <h3> Use policy & Disclaimer</h3>
+                <p> You can download and use the data, documents, and other materials
+                  provided here free of charge. If you do, we kindly ask you to
+                  reference this dataset as:
+                <ul style="list-style-type:none">
+                  <li>
+                    Knotz, Carlo and Moira Nelson. 2019. <i>The Comparative
+                      Unemployment Benefit Conditions & Sanctions Dataset</i>.
+                    Lund: Department of Political Science, Lund University.
+                  </li>
+                </ul>
+                </p>
+                <p>
+                  You may not sell any of the materials obtained here or parts
+                  thereof. You may also not incoporate our data and materials or parts thereof
+                  in any other dataset (other than replication datasets) without
+                  our explicit permission. You may furthermore not distribute
+                  any of the materials you obtained from us if they have been
+                  subsequently altered in any way, shape, or form.
+                </p>
+                <p>
+                  We have taken great care to produce high-quality data, but
+                  we can unfortunately not give any warranty that the dataset
+                  and all the accompanying files are entirely free of errors. Should you
+                  detect an error in any of the files or would like to suggest
+                  any other modifications, please feel free to contact us. We
+                  reject all liability for any damages incurred while using any
+                  of the materials provided by us.
+                </p>
+              </div>
+            </section>
+
+            <div class="wrapper">
+              <div class="divider div-transparent"></div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="footnotes.js"></script>
 </body>
+<footer>
+  <p> Funded by:</p>
+  <a href="https://www.crafoord.se/" target="_blank">
+    <img style="float:center" src="crafoord.png" width="150px" alt="Crafoordska stiftelsen"> </a>
+</footer>
+
+</html>
