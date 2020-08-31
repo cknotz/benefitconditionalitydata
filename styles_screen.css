@@ -1,5 +1,5 @@
 html {
-  scroll-padding-top: 70px;
+  /*scroll-padding-top: 70px;*/
   /* height of sticky header */
   scroll-behavior: smooth;
 }
@@ -11,6 +11,11 @@ h1, h2, h3 {
   font-weight: lighter;
   font-family: Lora, sans-serif;
   font-size: 20px;
+}
+
+h3 {
+  padding-top: 70px;
+  margin-top: -70px;
 }
 
 body {
@@ -118,6 +123,7 @@ a:active {
 .divider {
   position: relative;
   margin-top: 45px;
+  margin-bottom: 45px;
   height: 1px;
 }
 
