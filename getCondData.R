@@ -1,8 +1,6 @@
 
 # Function to download and subset Benefit Conditions & Sanctions Data
 
-
-
 getCondData <- function(indicators=NULL,space=NULL,time=NULL){
 
 require(dplyr)
