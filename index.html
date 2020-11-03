@@ -19,6 +19,7 @@
   <div id="navbar">
     <a href="#top">Home</a>
     <a href="#data">Access & Explore</a>
+    <a href="#import">Direct Import in R</a>
     <a href="#pubs">Publications</a>
     <a href="#people">People</a>
     <a href="#next">Contribute</a>
@@ -103,12 +104,109 @@
     <section id="data">
       <div class="content-wrap">
         <h3> Access & explore the data </h3>
-        <iframe src="https://cknotz.shinyapps.io/conditionality_newapp/" width="100%" height="900px" seamless=1 frameborder=0 alt="Interactive data dashboard" class="inter"></iframe>
+      <iframe src="https://cknotz.shinyapps.io/conditionality_newapp/" width="100%" height="900px" seamless=1 frameborder=0 alt="Interactive data dashboard" class="inter"></iframe>
         <p class="mobinfo">
           You can access the data dashboard
           <a href="https://cknotz.shinyapps.io/conditionality_newapp/" target="_blank">here</a>.
           (Please view this website from a device with a wider screen to see the
           embedded dashboard and other visualizations.)
+        </p>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <div class="divider div-transparent"></div>
+
+    <section id = "import">
+      <div class="content-wrap">
+        <h3>Directly load the dataset into <code>R</code></h3>
+        <p>
+          R users can directly import the main dataset or selected subsets of it using a single convenience function, <code>getCondData()</code>. The function itself can also be directly sourced into R:
+        </p>
+        <p>
+          <code>require(devtools)</code>
+        </p>
+        <p>
+          <code>devtools::source_url("https://raw.githubusercontent.com/cknotz/benefitconditionalitydata/master/getCondData.R")</code>
+        </p>
+        <p>
+          The function has three arguments, which are used to subset the data:
+          <ul>
+            <li>
+              <code>indicators</code>: Selects one or more of the synthetic summary indicators included in the dataset (see also "What the data measure" in the dasboard above or the <a target="_blank" href="https://www.dropbox.com/s/5epa4bbdn91xmvd/Knotz.Nelson_ConditionalityData_Codebook.pdf?dl=0">Codebook</a> for further details). Specified via a string (if selecting a single indicator) or string vector (of selecting multiple):
+              </li>
+              <ul>
+                <li>
+                  <code>conditionality</code>: The indicator for the overall conditionality of unemployment benefits;
+                </li>
+                <li>
+                  <code>conditions</code>: The indicator for the strictness of job-search and availability requirements;
+                </li>
+                <li>
+                  <code>sanctions</code>: The indicator for the overall strictness of benefit sanction rules;
+                </li>
+                <li>
+                  <code>occup</code>: The indicator for the degree of occupational protection ("can unemployed workers be forced to change occupations?");
+                </li>
+                <li>
+                  <code>wage</code>: The indicator for the degree of wage protection ("can unemployed workers be forced to accept lower wages?");
+                </li>
+                <li>
+                  <code>oth</code>: The indicator for the extent to which there are 'other' valid reasons (e.g. caring responsibilities, religious beliefs) for refusing an offer of employment;
+                </li>
+                <li>
+                  <code>jsr</code>: The indicator for the strictness of job-search requirements;
+                </li>
+                <li>
+                  <code>vol</code>: The indicator for the strictness of sanctions for voluntary unemployment;
+                </li>
+                <li>
+                  <code>ref</code>: The indicator for the strictness of sanctions for an initial refusal of an offer of employment;
+                </li>
+                <li>
+                  <code>rep</code>: The indicator for the strictness of sanctions for repeated refusals of offers of employment;
+                </li>
+                <li>
+                  <code>fail</code>: The indicator for the strictness of sanctions for failures to report job-search activities;
+                </li>
+              </ul>
+              <li>
+                <code>time</code>: Subsets the data to one or more years between 1980 and 2012. Specified as a numeric value (e.g. <code>1991</code>) or a numeric string;
+            </li>
+            <li>
+                <code>space</code>: Subsets the data to one or more countries. Specified as a string (if selecting a single country) or a string vector (if selecting multiple countries). Must be one or more of: Australia, Austria, Belgium, Canada, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Japan, Korea, Netherlands, New Zealand, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom;
+            </li>
+          </ul>
+        </p>
+        <p>
+          <strong>Examples:</strong>
+        </p>
+        <p>
+          Get the entire dataset:
+        </p>
+        <p>
+           <code>getCondData()</code>
+           <br /> <br />
+        </p>
+        <p>
+          Get all data for Sweden & Australia:
+        </p>
+        <p>
+           <code>getCondData(space=c("Australia","Sweden"))</code>
+           <br /> <br />
+        </p>
+        <p>
+          Get only the overall sanctions indicator, but for all countries and years:
+        </p>
+        <p>
+          <code>getCondData(indicators="sanctions")</code>
+          <br /><br />
+        </p>
+        <p>
+          Get only the overall indicator for Austria in five year intervals:
+        </p>
+        <p>
+          <code>getCondData(indicators="conditionality", space="Austria", time=seq(1980,2012,5))</code>
         </p>
       </div>
     </section>
